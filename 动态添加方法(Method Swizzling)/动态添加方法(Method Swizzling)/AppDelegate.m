@@ -44,9 +44,10 @@
     class_replaceMethod(clazz, replaceViewWillAppear, viewWillAppearImp, viewWillAppearTypeDescription);
     
 //    method_exchangeImplementations(viewWillAppearMethod, replaceMethod);
-    
+
     return YES;
 }
+
 
 - (void)replaceViewWillAppear:(BOOL)animate{
     [self replaceViewWillAppear:animate];

@@ -13,6 +13,7 @@
 		2B27E4BA1D011DB00048A0D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B27E4B81D011DB00048A0D9 /* Main.storyboard */; };
 		2B27E4BC1D011DB00048A0D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B27E4BB1D011DB00048A0D9 /* Assets.xcassets */; };
 		2B27E4BF1D011DB00048A0D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B27E4BD1D011DB00048A0D9 /* LaunchScreen.storyboard */; };
+		2B27E4C81D0129C80048A0D9 /* UIViewController+MJ_Method_Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B27E4C71D0129C80048A0D9 /* UIViewController+MJ_Method_Swizzling.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		2B27E4BB1D011DB00048A0D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B27E4BE1D011DB00048A0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B27E4C01D011DB00048A0D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B27E4C61D0129C80048A0D9 /* UIViewController+MJ_Method_Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJ_Method_Swizzling.h"; sourceTree = "<group>"; };
+		2B27E4C71D0129C80048A0D9 /* UIViewController+MJ_Method_Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJ_Method_Swizzling.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				2B27E4BD1D011DB00048A0D9 /* LaunchScreen.storyboard */,
 				2B27E4C01D011DB00048A0D9 /* Info.plist */,
 				2B27E4AF1D011DB00048A0D9 /* Supporting Files */,
+				2B27E4C61D0129C80048A0D9 /* UIViewController+MJ_Method_Swizzling.h */,
+				2B27E4C71D0129C80048A0D9 /* UIViewController+MJ_Method_Swizzling.m */,
 			);
 			path = "动态添加方法(Method Swizzling)";
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B27E4C81D0129C80048A0D9 /* UIViewController+MJ_Method_Swizzling.m in Sources */,
 				2B27E4B71D011DB00048A0D9 /* ViewController.m in Sources */,
 				2B27E4B41D011DB00048A0D9 /* AppDelegate.m in Sources */,
 				2B27E4B11D011DB00048A0D9 /* main.m in Sources */,

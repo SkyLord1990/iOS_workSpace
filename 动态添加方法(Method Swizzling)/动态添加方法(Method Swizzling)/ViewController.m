@@ -43,4 +43,9 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    NSLog(@"在被替换的方法中.........viewDidAppear");
+}
+
 @end
