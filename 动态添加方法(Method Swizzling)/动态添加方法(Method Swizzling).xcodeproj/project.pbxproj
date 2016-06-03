@@ -110,6 +110,7 @@
 				TargetAttributes = {
 					2B27E4AB1D011DB00048A0D9 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 9L49DPDZ8R;
 					};
 				};
 			};
@@ -261,6 +262,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "动态添加方法(Method Swizzling)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kanguo.hbd.-------Method-Swizzling-";
@@ -272,6 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "动态添加方法(Method Swizzling)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kanguo.hbd.-------Method-Swizzling-";

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <objc/runtime.h>
 
 @interface AppDelegate ()
 
@@ -16,8 +17,41 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //得到UIViewController的Class
+    const char *clsName = [@"UIViewController" cStringUsingEncoding:NSASCIIStringEncoding];
+    Class clazz = objc_getClass(clsName);
+    
+    
+    //得到原有方法viewWillAppear: 的SEL，Method，IMP和TypeDescription
+    SEL viewWillAppear = NSSelectorFromString(@"viewWillAppear:");
+    Method viewWillAppearMethod = class_getInstanceMethod(clazz, viewWillAppear);
+    const char *viewWillAppearTypeDescription = method_getTypeEncoding(viewWillAppearMethod);
+    IMP viewWillAppearImp = class_getMethodImplementation(clazz, viewWillAppear);
+    
+    //得到替换方法replaceViewWillAppear: 的SEL，Method，IMP和TypeDescription
+    SEL replaceViewWillAppear = @selector(replaceViewWillAppear:);
+    Method replaceMethod = class_getInstanceMethod([AppDelegate class],replaceViewWillAppear);
+    const char *replaceTypeDescription = method_getTypeEncoding(replaceMethod);
+    IMP replaceImp = class_getMethodImplementation([AppDelegate class], replaceViewWillAppear);
+    
+    //动态添加方法
+    class_addMethod(clazz, replaceViewWillAppear, replaceImp, replaceTypeDescription);
+    
+    
+    //交换方法的实现
+    class_replaceMethod(clazz, viewWillAppear, replaceImp, replaceTypeDescription);
+    class_replaceMethod(clazz, replaceViewWillAppear, viewWillAppearImp, viewWillAppearTypeDescription);
+    
+//    method_exchangeImplementations(viewWillAppearMethod, replaceMethod);
+    
     return YES;
+}
+
+- (void)replaceViewWillAppear:(BOOL)animate{
+    [self replaceViewWillAppear:animate];
+    NSLog(@"在替换的方法中.........replaceViewWillAppear");
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
