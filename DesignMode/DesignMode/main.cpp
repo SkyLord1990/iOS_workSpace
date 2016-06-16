@@ -24,7 +24,8 @@ int main(int argc, const char * argv[]) {
      */
     {
         Creator *creator = new Creator();
-        Product *pd = creator->FactoryMethod("ak47");
+//        Product *pd = creator->FactoryMethod("ak47");
+        Product *pd = creator->car_FactoryMethod();
         printf("%s",pd->ProductName().c_str());
         
         delete pd;
@@ -32,10 +33,12 @@ int main(int argc, const char * argv[]) {
         
         printf("\n");
         
-        pd = creator->FactoryMethod("car");
+//        pd = creator->FactoryMethod("car");
+        pd = creator->AK_FactoryMethod();
         printf("%s",pd->ProductName().c_str());
         
         delete pd;
+        
         delete creator;
     }
     

@@ -25,7 +25,8 @@ public:
     
     Product *FactoryMethod(const string &type);
     
-    
+    Product *car_FactoryMethod();
+    Product *AK_FactoryMethod();
 };
 
 

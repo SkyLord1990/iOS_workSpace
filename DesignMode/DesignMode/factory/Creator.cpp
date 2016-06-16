@@ -24,5 +24,14 @@ Product * Creator::FactoryMethod(const string &type)
 }
 
 
+Product * Creator::car_FactoryMethod()
+{
+    return new ProductCar();
+}
+Product * Creator::AK_FactoryMethod()
+{
+    return new ProductAK47();
+}
+
 
 
