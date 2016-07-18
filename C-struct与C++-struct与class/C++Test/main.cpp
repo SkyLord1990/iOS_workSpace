@@ -36,6 +36,8 @@ struct B : A {
     }
 };
 
+
+
 class ClassA {
     int age; //默认为私有的
 };

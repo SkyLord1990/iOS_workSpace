@@ -8,6 +8,10 @@
 
 #import "UIViewController+MJ_Method_Swizzling.h"
 #import <objc/runtime.h>
+#import <UIKit/UIKit.h>
+
+
+
 
 @implementation UIViewController (MJ_Method_Swizzling)
 
