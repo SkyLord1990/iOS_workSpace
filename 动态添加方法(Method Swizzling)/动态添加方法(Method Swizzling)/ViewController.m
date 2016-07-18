@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property(nonatomic,assign)NSString *hahal;
+
 @end
 
 @implementation ViewController
